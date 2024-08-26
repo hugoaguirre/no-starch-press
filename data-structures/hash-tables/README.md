@@ -44,3 +44,14 @@ Your goal is to have a function that effectively maps keys uniformly throughout 
 ### Considerations for your hashing function
 - __Be deterministic__: Map the same key to the same bin **all the time**
 - __Have a predefined range for a given size__: The hash function needs to map any key into a limited range, corresponding to the number of hash buckets
+
+### Example of a traditional hashing function
+```python
+def HashingFunction(key: int, size: int) -> int:
+  return key % size
+```
+Or, for strings:
+```python
+def HashingFunction(key: str, size: int) -> int:
+  return hash(key) % size
+```
